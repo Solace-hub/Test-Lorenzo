@@ -28,8 +28,8 @@ class ConfrontoInsieme:
 
     def main():
         while True:
-            insieme1 = InsiemeNumeri()
-            insieme2 = InsiemeNumeri()
+            insieme1 = insieme1()
+            insieme2 = insieme2()
 
             print("Valorizza la prima lista di numeri:")
             insieme1.valorizza_lista()
