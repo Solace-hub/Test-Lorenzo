@@ -1,3 +1,4 @@
+#Creazione della classe Libro
 class Libro:
     def __init__(self, titolo, autore, anno, quantita):
         self.titolo = titolo
@@ -8,6 +9,7 @@ class Libro:
     def __str__(self):
         return f"Titolo: {self.titolo}, Autore: {self.autore}, Anno: {self.anno}, Quantità: {self.quantita}"
 
+#Creazione della classe Libreria con le relative funzioni
 class Libreria:
     def __init__(self):
         self.libri = {}
@@ -39,6 +41,7 @@ class Libreria:
         else:
             print("Libro non trovato.")
 
+  #Tutta la parte di gestione dei libri
     def gestione_libri(self):
         titolo = input("Inserisci il titolo del libro da gestire: ")
         if titolo in self.libri:
@@ -70,6 +73,7 @@ class Libreria:
         else:
             print("Libro non trovato.")
 
+  #Funzione del menù per l'input all'utente
     def menu(self):
         while True:
             print("\nMenu:")
@@ -95,6 +99,6 @@ class Libreria:
             else:
                 print("Scelta non valida, riprova.")
 
-
+#Esempi di utilizzo
 libreria = Libreria()
 libreria.menu()
