@@ -6,7 +6,7 @@ class Libro:
         self.quantita = quantita
 
     def __str__(self):
-      return f"Titolo: {self.titolo}, Autore: {self.autore}, Anno: {self.anno}, Quantità: {self.quantita}"
+        return f"Titolo: {self.titolo}, Autore: {self.autore}, Anno: {self.anno}, Quantità: {self.quantita}"
 
 class Libreria:
     def __init__(self):
@@ -70,11 +70,31 @@ class Libreria:
         else:
             print("Libro non trovato.")
 
+    def menu(self):
+        while True:
+            print("\nMenu:")
+            print("1. Aggiungere un nuovo libro")
+            print("2. Visualizzare tutti i libri")
+            print("3. Cercare un libro per titolo")
+            print("4. Gestire un libro")
+            print("5. Uscire")
+
+            scelta = input("Scegli un'opzione: ")
+
+            if scelta == '1':
+                self.aggiungi_libro()
+            elif scelta == '2':
+                self.visualizza_libri()
+            elif scelta == '3':
+                self.cerca_libro()
+            elif scelta == '4':
+                self.gestione_libri()
+            elif scelta == '5':
+                print("Arrivederci!")
+                break
+            else:
+                print("Scelta non valida, riprova.")
+
 
 libreria = Libreria()
-
-# Esempi di utilizzo del programma:
-libreria.aggiungi_libro()  # Aggiungi un libro
-libreria.visualizza_libri()  # Visualizza tutti i libri
-libreria.cerca_libro()  # Cerca un libro per titolo
-libreria.gestione_libri()  # Gestisci un libro
+libreria.menu()
